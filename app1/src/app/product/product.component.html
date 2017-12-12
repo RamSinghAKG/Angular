@@ -1,3 +1,12 @@
-<p>
-  product works!
-</p>
+<div class="product">
+  <h1 class='item-header'> Item's List </h1>
+  <div class="addItem">
+    <input [(ngModel)]="newItem" placeholder="Add Item" class="addText">
+    <button (click)="pushItem()">Add</button>
+  </div>
+  <ul class="productListContainer">
+    <li class="productList" *ngFor='let item of items'>
+      {{item}} <span class="removeItem">x</span>
+    </li>
+  </ul>
+</div>
