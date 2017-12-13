@@ -7,8 +7,9 @@
 </div>
 <app-my-component> </app-my-component>
 <a routerLink="/member"> Member </a> <br/>
-<a routerLink="/product"> Product </a>
-<br/>
+<a routerLink="/product"> Product </a> <br/>
+<a routerLink="/registration"> Registration</a> <br/>
+
 <router-outlet></router-outlet>
 <p *ngIf="isTemplateShown; then HelpLink  else NoHelp"> No Help link!! </p>
 <ng-template #NoHelp>
