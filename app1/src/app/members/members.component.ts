@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./members.component.css']
 })
 export class MembersComponent implements OnInit {
-
+  randomArr = [3,1,4,9,6];
   constructor() { }
 
   ngOnInit() {

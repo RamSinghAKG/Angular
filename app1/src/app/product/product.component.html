@@ -5,8 +5,8 @@
     <button (click)="pushItem()">Add</button>
   </div>
   <ul class="productListContainer">
-    <li class="productList" *ngFor='let item of items'>
-      {{item}} <span class="removeItem">x</span>
+    <li class="productList" *ngFor="let item of items;">
+      {{item}} <span (click)="removeItem(index)" class="removeItem">x</span>
     </li>
   </ul>
 </div>
