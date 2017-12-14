@@ -9,10 +9,18 @@ export class RegistrationComponent implements OnInit {
   frmUser;
   onSubmit = function(user){
     console.log('onSubmit user : ',user);
+    this.resetForm();
   }
   constructor() {
    }
    resetForm(){
+     this.frmUser.patchValue({
+          firstname : '',
+          lastname: '',
+          languages: ''
+        });
+   }
+   initForm(){
      this.frmUser = new FormGroup({
        firstname: new FormControl("Ram"),
        lastname: new FormControl(""),
@@ -20,7 +28,7 @@ export class RegistrationComponent implements OnInit {
      });
    }
   ngOnInit(){
-    this.resetForm();
+    this.initForm();
   }
 
 

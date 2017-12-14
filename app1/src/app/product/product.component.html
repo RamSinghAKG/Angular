@@ -1,7 +1,7 @@
 <form class="product" #frmProduct="ngForm">
   <h1 class='item-header'> Item's List </h1>
   <div class="addItem">
-    <input name="newItem" placeholder="Add Item" class="addText" ngModel>
+    <input name="newItem" placeholder="Add Item" (ngModelChange)="newItemChanged(oldValue, newValue=$event)" class="addText" ngModel>
     <button (click)="pushItem(frmProduct.value)">Add</button>
   </div>
   <ul class="productListContainer">
