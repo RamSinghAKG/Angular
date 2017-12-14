@@ -1,4 +1,4 @@
-<form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+<form class="container" [formGroup]="frmUser" (ngSubmit)="onSubmit(frmUser.value)">
   <input class="frmInput" type="text" name="firstname" placeholder="firstname" formControlName="firstname">
   <br />
   <input class="frmInput" type="text" name="lastname" placeholder="lastname" formControlName="lastname">

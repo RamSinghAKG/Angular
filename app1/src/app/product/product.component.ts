@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   items = ['Angular 4', 'React JS', 'Underscore'];
-  newItem = "";
+  prod = {newItem: "def"};
 
-   pushItem = function(){
-     if(this.newItem != ""){
-       this.items.push(this.newItem);
-       this.newItem = "";
+   pushItem = function(prod){
+     if(prod.newItem != ""){
+       this.items.push(prod.newItem);
+       prod.newItem = "";
      }
    }
    removeItem = function(index){

@@ -6,21 +6,21 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-  form;
+  frmUser;
   onSubmit = function(user){
-    console.log('user : ',user);
+    console.log('onSubmit user : ',user);
   }
   constructor() {
-    console.log('constructor....');
+   }
+   resetForm(){
+     this.frmUser = new FormGroup({
+       firstname: new FormControl("Ram"),
+       lastname: new FormControl(""),
+       languages: new FormControl("")
+     });
    }
   ngOnInit(){
-    console.log('ngOnInit....');
-
-    this.form = new FormGroup({
-      firstname: new FormControl("Ram"),
-      lastname: new FormControl(""),
-      languages: new FormControl("")
-    });
+    this.resetForm();
   }
 
 

@@ -1,12 +1,12 @@
-<div class="product">
+<form class="product" #frmProduct="ngForm">
   <h1 class='item-header'> Item's List </h1>
   <div class="addItem">
-    <input [(ngModel)]="newItem" placeholder="Add Item" class="addText">
-    <button (click)="pushItem()">Add</button>
+    <input name="newItem" placeholder="Add Item" class="addText" ngModel>
+    <button (click)="pushItem(frmProduct.value)">Add</button>
   </div>
   <ul class="productListContainer">
     <li class="productList" *ngFor="let item of items;">
       {{item}} <span (click)="removeItem(index)" class="removeItem">x</span>
     </li>
   </ul>
-</div>
+</form>
