@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -22,14 +22,23 @@ export class RegistrationComponent implements OnInit {
    }
    initForm(){
      this.frmUser = new FormGroup({
-       firstname: new FormControl("Ram"),
-       lastname: new FormControl(""),
+       firstname: new FormControl("", Validators.compose([
+         Validators.required,
+         Validators.minLength(3),
+         Validators.pattern('[\\w\\-\\s\\/]+')
+       ])),
+       lastname: new FormControl("", Validators.compose([
+        this.textValidators
+       ])),
        languages: new FormControl("")
      });
+   }
+   textValidators(control:FormControl){
+     if(control.value.length < 3 ){
+       return {'lastname' :  true};
+     }
    }
   ngOnInit(){
     this.initForm();
   }
-
-
 }
