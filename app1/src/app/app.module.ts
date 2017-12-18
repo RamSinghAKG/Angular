@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { AppComponent } from './app.component';
 import { MyDataService } from './my-data.service';
 import { MyComponentComponent } from './my-component/my-component.component';
@@ -26,6 +26,7 @@ import { RegistrationComponent } from './registration/registration.component';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path: 'member',

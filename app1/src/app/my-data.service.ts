@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { log } from 'util';
 @Injectable()
 export class MyDataService {
   obj = {
@@ -10,14 +11,13 @@ export class MyDataService {
   }
   constructor(private http: Http) { }
   fetchData() {
-    return this.http.get('src/data/students.json').map(
+    return this.http.get("src/data/students.json").map(
       (response) => response.json()
     ).subscribe(
-      (data) => console.log(data)
+      (data) => console.log("Data :  ",data)
     )
   }
   success(){
     return "Successful";
   }
-
 }
