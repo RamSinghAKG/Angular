@@ -11,7 +11,7 @@ export class MyDataService {
   }
   constructor(private http: Http) { }
   fetchData() {
-    return this.http.get("src/data/students.json").map(
+    return this.http.get("../assets/students.json").map(
       (response) => response.json()
     ).subscribe(
       (data) => console.log("Data :  ",data)
