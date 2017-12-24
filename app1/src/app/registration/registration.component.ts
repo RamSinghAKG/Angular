@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { log } from 'util';
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -12,6 +13,9 @@ export class RegistrationComponent implements OnInit {
     this.resetForm();
   }
   constructor() {
+  }
+   onSave($event){
+      console.log('onSave : ', $event);
    }
    resetForm(){
      this.frmUser.patchValue({

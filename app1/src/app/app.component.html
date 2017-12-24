@@ -4,7 +4,8 @@
   <img  [@myAnimation] = "state" width="100" alt="Angular Logo" [src]="angularLogo">
 </div>
 
-<button (click)="animate()" class="btn btn-primary">Animate tittle</button>
+<button (click)="animate($event)" class="btn btn-primary">Animate logo</button>
+
 <app-my-component> </app-my-component>
 <a routerLink="/member"> Member </a> <br/>
 <a routerLink="/product"> Product </a> <br/>
@@ -23,3 +24,4 @@
     </li>
   </ul>
 </ng-template>
+

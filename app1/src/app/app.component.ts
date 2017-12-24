@@ -32,7 +32,6 @@ export class AppComponent {
     this.newService.obj.name="JOHN";
     this.obj = this.newService.obj;
     this.newService.fetchData();
-  
   }
   animate() {
     this.state = this.state == 'larger' ? 'smaller'  : 'larger';

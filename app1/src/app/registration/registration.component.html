@@ -9,5 +9,8 @@
       <option value="angular">Angular</option>
   </select>
   <br />
-  <input class="frmSelect" [disabled]="!frmUser.valid" type="submit" value="Submit">
-</form>
+  <div class="row">
+    <button (click)="onSave($event)" class="btn btn-warning col-sm-6">Save</button>
+    <input class=" btn btn-success col-sm-6" [disabled]="!frmUser.valid" type="submit" value="Submit">
+  </div>
+  </form>
