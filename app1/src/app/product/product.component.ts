@@ -8,8 +8,8 @@ import { MyDataService } from './../my-data.service';
 export class ProductComponent implements OnInit {
   frmProduct;
   items = ['Angular 4', 'React JS', 'Underscore'];
+  
   constructor(private newService: MyDataService){
-
   }
   // prod = {newItem: "default"};
    newItemChanged = function(oldValue, changedValue){
@@ -30,3 +30,4 @@ export class ProductComponent implements OnInit {
   }
 
 }
+
