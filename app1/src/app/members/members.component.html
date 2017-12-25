@@ -3,6 +3,7 @@
       <legend>Others features</legend>
       <table><tr><td [attr.colspan]="colSpan"> Attribute Binding </td></tr></table>
       <p> custom sort pipe : {{ randomArr | sort:'descending' }} </p>
+      <p> Favorite : <span id="favorite" class="glyphicon pointer" [class.glyphicon-star]="isFavorite" [class.glyphicon-star-empty]="!isFavorite" (click)="toggleFavorite()"></span></p>
   </fieldset>
 </form>
 

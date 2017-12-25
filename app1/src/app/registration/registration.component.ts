@@ -17,6 +17,10 @@ export class RegistrationComponent implements OnInit {
    onSave($event){
       console.log('onSave : ', $event);
    }
+   onKeyUp(email){
+    console.log("email : ", email);
+  }
+  
    resetForm(){
      this.frmUser.patchValue({
           firstname : '',

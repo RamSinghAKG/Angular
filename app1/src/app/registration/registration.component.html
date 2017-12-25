@@ -12,5 +12,6 @@
   <div class="row">
     <button (click)="onSave($event)" class="btn btn-warning col-sm-6">Save</button>
     <input class=" btn btn-success col-sm-6" [disabled]="!frmUser.valid" type="submit" value="Submit">
+    <input [(ngModel)=]"email" (keyup.enter)="onKeyUp()" />
   </div>
   </form>
