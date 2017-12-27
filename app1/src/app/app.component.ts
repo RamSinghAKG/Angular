@@ -25,6 +25,7 @@ export class AppComponent {
   isTemplateShown = true;
   angularLogo = 'https://angular.io/assets/images/logos/angular/shield-large.svg';
   state: string = 'smaller';
+  
   constructor(private newService: MyDataService){ }
 
   ngOnInit() {

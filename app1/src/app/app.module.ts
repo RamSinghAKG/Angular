@@ -13,6 +13,7 @@ import { MembersComponent } from './members/members.component';
 import { SortPipe } from './app.sorts';
 import { RegistrationComponent } from './registration/registration.component';
 import { MyTitleCasePipe } from './my-title-case.pipe';
+import { FavoriteComponent } from './favorite/favorite.component';
 @NgModule({
   declarations: [
     SortPipe,
@@ -21,7 +22,8 @@ import { MyTitleCasePipe } from './my-title-case.pipe';
     ProductComponent,
     MembersComponent,
     RegistrationComponent,
-    MyTitleCasePipe
+    MyTitleCasePipe,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,

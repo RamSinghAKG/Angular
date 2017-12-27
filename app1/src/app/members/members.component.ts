@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { EmitArgs } from '../favorite/favorite.component';
 @Component({
   selector: 'app-members',
   templateUrl: './members.component.html',
@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
   randomArr = [3,1,4,9,6];
-  isFavorite = false;
+  post = { title: "Title", isFavorite: true }
   constructor() { }
-  toggleFavorite(){
-    this.isFavorite = !this.isFavorite;
-  }
-  ngOnInit() {
+  ngOnInit() { }
+
+  onFavoriteChanged(emitObj:EmitArgs){
+    console.log("favorite changed : ", emitObj);
   }
 
 }
